@@ -1,0 +1,290 @@
+:root {
+  --charcoal: #4f4450;
+  --pond-bottom: #264a46;
+  --teal: #04dac8;
+  --twilight: #1a2a47;
+  --ocean: #206777;
+  --ubergine: #6a2352;
+  --petal: #f4e9f3;
+  --ink: #292c31;
+  --anti: #ebf2fa;
+  --ice: #ccd6f6;
+  --slate: #8892b0;
+  --sea-glass: #7fd1ae;
+  --lime: #73d645;
+  --navy-shadow: rgba(2, 12, 27, 0.7);
+  --dark-slate: #495670;
+
+  --font-family-main: sans-serif;
+  --font-family-secondary: monospace;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+}
+
+.m-sm {
+  margin: var(--space-sm);
+}
+.m-md {
+  margin: var(--space-md);
+}
+.m-lg {
+  margin: var(--space-lg);
+}
+.p-sm {
+  padding: var(--space-sm);
+}
+.p-md {
+  padding: var(--space-md);
+}
+.p-lg {
+  padding: var(--space-lg);
+}
+.span-8 {
+  min-width: 66%;
+}
+.span-4 {
+  min-width: 32%;
+}
+.span-2 {
+  flex-basis: 15%;
+}
+.span-10 {
+  flex-basis: 83%;
+}
+
+body {
+  background: var(--twilight);
+  color: var(--petal);
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family-main);
+  box-sizing: border-box;
+}
+
+p {
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  font-size: 25px;
+  font-family: var(--font-family-secondary);
+}
+
+a {
+  color: var(--ice);
+  text-decoration: none;
+}
+
+h6 {
+  font-size: 50px;
+  color: var(--teal);
+
+  margin: 0;
+  padding: 10px;
+}
+
+span.number {
+  color: var(--teal);
+  font-size: 15px;
+}
+
+img {
+  max-width: 100%;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li:hover a {
+  color: var(--teal);
+  transition: 0.5s;
+}
+main.container {
+  margin-top: 130px;
+  box-sizing: border-box;
+}
+.social-media {
+  font-size: 20px;
+  position: fixed;
+  left: 1rem;
+  top: 50%;
+}
+.social-media i {
+  font-size: 1.2rem;
+  display: block;
+  margin: 15px 0;
+  color: var(--sea-glass);
+}
+
+.button {
+  border: 1px solid var(--sea-glass);
+  width: 80px;
+  padding: 20px;
+  color: var(--sea-glass);
+  text-align: center;
+}
+
+.button:hover {
+  background-color: var(--teal);
+  color: var(--charcoal);
+  transition: 0.5s;
+}
+
+.menu {
+  font-family: var(--font-family-secondary);
+  display: flex;
+  align-items: center;
+}
+
+.menu ul {
+  display: flex;
+}
+
+.menu li {
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  background: var(--twilight);
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-md);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: var(--space-md);
+  box-sizing: border-box;
+}
+
+.intro .name p {
+  color: var(--teal);
+}
+
+.intro h1 {
+  font-size: 60px;
+}
+
+.intro .button {
+  width: 160px;
+}
+.intro .border {
+  width: 0;
+  height: 150px;
+}
+
+.intro-detail p {
+  max-width: 520px;
+  line-height: 1.5rem;
+  margin-bottom: 80px;
+}
+
+.intro-detail a {
+  color: var(--sea-glass);
+}
+
+.intro-detail a:hover {
+  color: var(--teal);
+  text-decoration: underline;
+
+  transition: 0.5s;
+}
+
+.aboutme {
+  /* margin: 80px 0; */
+  box-sizing: border-box;
+}
+
+.heading {
+  gap: 2%;
+  display: flex;
+  align-items: center;
+  margin: 80px 0;
+}
+
+.heading span {
+  font-size: 20px;
+}
+
+.border {
+  width: 300px;
+  border: 1px solid var(--slate);
+}
+
+.about-me-details {
+  display: flex;
+  flex-basis: 48%;
+  gap: 2%;
+  box-sizing: border-box;
+}
+
+.profile-pic {
+  width: 100%;
+}
+.exp-details {
+  display: flex;
+  gap: 2%;
+}
+
+.exp-details li {
+  padding: 10px 15px;
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--ice);
+}
+
+ul.tabs li {
+  border-left: 3px solid var(--slate);
+}
+
+ul.tabs li.active,
+ul.tabs li:hover {
+  border-left-color: var(--teal);
+  color: var(--teal);
+  cursor: pointer;
+  background-color: var(--dark-slate);
+}
+
+.tab-panel h3,
+.tab-panel h5 {
+  font-size: 1rem;
+}
+
+.tab-panel {
+  position: relative;
+}
+
+.tab-panel ul {
+  padding: 0 15px;
+}
+
+.tab-panel li:before {
+  content: "➛";
+  position: absolute;
+  left: 0px;
+  color: var(--teal);
+}
+
+@media (min-width: 850px) {
+  .nav {
+    max-width: 1200px;
+  }
+
+  .container {
+    width: 980px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+}
