@@ -1,3 +1,4 @@
+/* Variables */
 :root {
   --charcoal: #4f4450;
   --pond-bottom: #264a46;
@@ -22,6 +23,8 @@
   --space-lg: 1.5rem;
 }
 
+/* utility classes */
+
 .m-sm {
   margin: var(--space-sm);
 }
@@ -40,6 +43,9 @@
 .p-lg {
   padding: var(--space-lg);
 }
+
+/* grid system */
+
 .span-8 {
   min-width: 66%;
 }
@@ -52,6 +58,8 @@
 .span-10 {
   flex-basis: 83%;
 }
+
+/* base styling */
 
 body {
   background: var(--twilight);
@@ -92,11 +100,6 @@ h6 {
   padding: 10px;
 }
 
-span.number {
-  color: var(--teal);
-  font-size: 15px;
-}
-
 img {
   max-width: 100%;
 }
@@ -111,16 +114,26 @@ li:hover a {
   color: var(--teal);
   transition: 0.5s;
 }
+
+/* components */
+
+span.number {
+  color: var(--teal);
+  font-size: 15px;
+}
+
 main.container {
   margin-top: 130px;
   box-sizing: border-box;
 }
+
 .social-media {
   font-size: 20px;
   position: fixed;
   left: 1rem;
   top: 50%;
 }
+
 .social-media i {
   font-size: 1.2rem;
   display: block;
@@ -169,6 +182,17 @@ main.container {
   box-sizing: border-box;
 }
 
+.heading {
+  gap: 2%;
+  display: flex;
+  align-items: center;
+  margin: 80px 0;
+}
+
+.heading span {
+  font-size: 20px;
+}
+
 .intro .name p {
   color: var(--teal);
 }
@@ -207,17 +231,6 @@ main.container {
   box-sizing: border-box;
 }
 
-.heading {
-  gap: 2%;
-  display: flex;
-  align-items: center;
-  margin: 80px 0;
-}
-
-.heading span {
-  font-size: 20px;
-}
-
 .border {
   width: 300px;
   border: 1px solid var(--slate);
@@ -233,6 +246,7 @@ main.container {
 .profile-pic {
   width: 100%;
 }
+
 .exp-details {
   display: flex;
   gap: 2%;
@@ -276,6 +290,8 @@ ul.tabs li:hover {
   left: 0px;
   color: var(--teal);
 }
+
+/* Media query */
 
 @media (min-width: 850px) {
   .nav {
