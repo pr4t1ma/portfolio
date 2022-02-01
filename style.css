@@ -468,9 +468,40 @@ a.button.center {
   display: flex;
   justify-content: center;
 }
+
+form {
+  background: var(--ocean-green);
+  padding: 4rem;
+  box-sizing: 0.5, 1, 0.5;
+  opacity: 0.8;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center;
+  align-items: center; */
+  color: var(--ink);
+  margin: 4rem 0;
+}
+form h5 {
+  font-size: 2rem;
+}
+
+.form-fields {
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+}
+
+form input {
+  padding: 10px;
+  margin: 15px 0;
+  border: none;
+  outline: none;
+}
+
 footer {
   padding: 1rem;
   text-align: center;
+  margin-top: 3rem;
 
   background: var(--ink);
   color: var(--anti);
@@ -543,6 +574,10 @@ footer {
   .exp-details ul.tabs li:hover,
   .exp-details ul.tabs li.active {
     border-bottom-color: var(--teal);
+  }
+
+  form h5 {
+    font-size: 1.5rem;
   }
 }
 
