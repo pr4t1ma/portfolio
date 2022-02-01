@@ -1,30 +1,32 @@
 /* Variables */
 :root {
-  --charcoal: #4f4450;
+  --black: #000;
+  --charcoal: #b52929;
   --pond-bottom: #264a46;
-  --teal: #04dac8;
-  --twilight: #1a2a47;
+  --teal: #63725b;
+  --twilight: #766c5b;
   --ocean: #792589;
   --ubergine: #6a2352;
   --petal: #f4e9f3;
-  --ink: #292c31;
-  --anti: #ebf2fa;
-  --ice: #ccd6f6;
+  --ink: #f8f7f4;
+  --anti: #8c857a;
+  --white: #fff;
   --slate: #8892b0;
   --sea-glass: #7fd1ae;
-  --ocean-green: #098eac;
+  --ocean-green: #46571e;
   --lignt-gray: #9fc0db;
   --lime: #96b74c;
   --navy-shadow: rgba(2, 12, 27, 0.7);
   --dark-slate: #495670;
   --lignt-green: #8dd4d5;
   --gray-dark: #82bdd9;
-  --nute: #eae7dc;
+  --nute: #d6d3c6;
   --peach: #e98074;
+  --peach-dark: #b3584e;
   --coffee: #8e8d8a;
   --gray: #e85a4f;
   --font-family-main: sans-serif;
-  --font-family-secondary: monospace;
+  --font-family-secondary: "Cormorant", serif;
   --space-sm: 0.5rem;
   --space-md: 1rem;
   --space-lg: 1.5rem;
@@ -60,10 +62,10 @@
 }
 
 .span-4 {
-  min-width: 32%;
+  flex-basis: 32%;
 }
 .span-8 {
-  min-width: 66%;
+  flex-basis: 66%;
 }
 .span-9 {
   flex-basis: 74.5;
@@ -75,8 +77,8 @@
 /* base styling */
 
 body {
-  background: var(--twilight);
-  color: var(--petal);
+  background: var(--white);
+  color: var(--black);
   font-size: 16px;
   margin: 0;
   padding: 0;
@@ -101,16 +103,8 @@ h6 {
 }
 
 a {
-  color: var(--ice);
+  color: var(--peach);
   text-decoration: none;
-}
-
-h6 {
-  font-size: 50px;
-  color: var(--teal);
-
-  margin: 0;
-  padding: 10px;
 }
 
 img {
@@ -123,16 +117,22 @@ ul {
   padding: 0;
 }
 
-li:hover a {
-  color: var(--teal);
-  transition: 0.5s;
-}
-
 /* components */
 
-span.number {
-  color: var(--teal);
-  font-size: 15px;
+.menu a {
+  color: white;
+}
+
+.menu a:hover {
+  color: var(--nute);
+  transition: 0.5s;
+}
+.menu a.resume {
+  font-weight: bold;
+}
+.menu a.resume:hover {
+  color: white;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.3);
 }
 
 main.container {
@@ -143,31 +143,31 @@ main.container {
 }
 
 .social-media {
-  font-size: 20px;
-  position: fixed;
-  left: 1rem;
-  top: 50%;
+  display: flex;
+  margin: 1rem;
+  justify-content: center;
 }
 
 .social-media i {
   font-size: 1.2rem;
   display: block;
-  margin: 15px 0;
-  color: var(--sea-glass);
+  margin: 1rem;
+  color: var(--ocean-green);
 }
 
 .button {
-  border: 1px solid var(--sea-glass);
+  border: none;
+  background: var(--peach);
   display: inline-block;
   padding: 10px 20px;
-  color: var(--sea-glass);
+  color: var(--white);
   text-align: center;
 }
 
 .button:hover {
-  background-color: var(--teal);
-  color: var(--charcoal);
+  background-color: var(--peach-dark);
   transition: 0.5s;
+  border: none;
 }
 
 .menu {
@@ -197,10 +197,18 @@ main.container {
   box-sizing: border-box;
   box-shadow: 0px 2px 14px rgb(0 0 0 / 20%);
   z-index: 999;
+  font-size: 1.1rem;
 }
 .header .hamburger {
   display: none;
 }
+.logo h6 {
+  font-size: 50px;
+  color: var(--petal);
+  margin: 0;
+  padding: 10px;
+}
+
 .heading {
   gap: 2%;
   display: flex;
@@ -246,7 +254,7 @@ main.container {
 }
 
 .intro-detail a:hover {
-  color: var(--teal);
+  color: var(--pond-bottom);
   text-decoration: underline;
 
   transition: 0.5s;
@@ -262,6 +270,14 @@ main.container {
   flex-basis: 48%;
   gap: 2%;
   box-sizing: border-box;
+  background-color: var(--ocean-green);
+  color: #fff;
+  gap: 5%;
+  padding: 0.5rem;
+
+  font-family: "Cormorant";
+  font-size: 23px;
+  align-items: center;
 }
 
 .profile-pic {
@@ -286,10 +302,10 @@ ul.tabs li {
 
 ul.tabs li.active,
 ul.tabs li:hover {
-  border-left-color: var(--teal);
-  color: var(--teal);
+  border-left-color: var(--ocean-green);
+  color: var(--white);
   cursor: pointer;
-  background-color: var(--dark-slate);
+  background-color: var(--ocean-green);
 }
 
 .tab-panel h3,
@@ -329,6 +345,10 @@ ul.tabs li:hover {
 
 .reverse .project-desc {
   grid-column: 1/8;
+}
+
+.reverse .project-desc h2,
+.reverse .project-desc h5 {
   text-align: left;
 }
 
@@ -353,13 +373,20 @@ ul.tabs li:hover {
 .project-desc {
   grid-row: 1/2;
   grid-column: 5/-1;
-  text-align: right;
+
   z-index: 1;
+}
+
+.project-desc h2,
+.project-desc h5 {
+  text-align: right;
 }
 
 .project-details p {
   background: var(--ocean-green);
-  padding: 1rem;
+  color: var(--petal);
+  padding: 1.5rem;
+  align-items: center;
 }
 
 .project-tags {
@@ -379,7 +406,8 @@ ul.tabs li:hover {
 }
 
 .project-item {
-  background-color: var(--pond-bottom);
+  background-color: var(--ink);
+  color: var(--anti);
   transition: transform 300ms;
   padding: 30px;
 }
@@ -398,7 +426,7 @@ ul.tabs li:hover {
 i.far.fa-external-link:hover,
 i.fab.fa-github-alt:hover,
 i.fas.fa-folder:hover {
-  color: var(--ocean-green);
+  color: var(--charcoal);
   transition: 0.2s;
 }
 
@@ -443,6 +471,9 @@ a.button.center {
 footer {
   padding: 1rem;
   text-align: center;
+
+  background: var(--ink);
+  color: var(--anti);
 }
 /* Media query */
 @media (max-width: 700px) {
@@ -472,6 +503,7 @@ footer {
     display: block;
     font-size: 1.5rem;
     flex-basis: 1.5rem;
+    color: white;
   }
   .logo {
     text-align: center;
@@ -541,7 +573,7 @@ footer {
   .reverse .project-desc {
     grid-row: 2/3;
     grid-column: 1/-1;
-    text-align: left;
+
     margin: 2rem 0;
   }
 }
