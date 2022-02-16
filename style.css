@@ -463,7 +463,8 @@ ul.project-list li {
   padding-right: 1rem;
 }
 
-a.button.center {
+a.button.center,
+.button.center {
   display: block;
   width: fit-content;
   margin: 0 auto;
