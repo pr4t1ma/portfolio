@@ -7,7 +7,7 @@
       href="https://fonts.googleapis.com/css2?family=Cormorant:wght@300&display=swap"
       rel="stylesheet"
     />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
@@ -320,11 +320,11 @@
             say hi, I’ll try my best to get back to you!
           </p>
         </get-in-touch-des>
-        <form action="">
+        <form action="/" method="post">
           <h5>Contact form</h5>
           <div class="form-fields">
-            <input type="text" placeholder="Name" />
-            <input type="email" placeholder="Email" />
+            <input name="name" type="text" placeholder="Name" />
+            <input name="email" type="email" placeholder="Email" />
             <textarea
               name="message"
               id="message"
@@ -333,8 +333,7 @@
               placeholder="Write something"
             ></textarea>
           </div>
-
-          <a class="button center" href=""> submit</a>
+          <button class="button center">submit</button>
         </form>
       </div>
       <!-- End Get in touch -->
@@ -342,12 +341,19 @@
 
     <footer>
       <div class="social-media">
-        <a href="https://www.facebook.com/">
+        <a target="_blank" href="https://www.instagram.com/prati.ma/">
           <i class="fa-brands fa-instagram"></i
         ></a>
-        <i class="fa-brands fa-linkedin"></i>
-        <i class="fa-brands fa-github"></i>
-        <i class="fa-brands fa-facebook-f"></i>
+        <a target="_blank" href="https://www.linkedin.com/in/pratima-maharjan/"
+          ><i class="fa-brands fa-linkedin"></i
+        ></a>
+        <a target="_blank" href="https://github.com/pr4t1ma">
+          <i class="fa-brands fa-github"></i
+        ></a>
+
+        <a target="_blank" href="https://www.facebook.com/pr4tima"
+          ><i class="fa-brands fa-facebook-f"></i
+        ></a>
       </div>
       <p class="copyright">
         &copy; 2022 Designed and built by Pratima Maharjan
