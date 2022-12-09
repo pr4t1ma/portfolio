@@ -89,24 +89,82 @@
         </div>
         <div class="exp-details">
           <ul class="tabs span-4">
-            <li class="active">3 Hammers</li>
-            <li>Self training</li>
+            <li class="active">
+              <button role="tab" aria-selected="true" id="internship">
+                3 Hammers
+              </button>
+            </li>
+            <li>
+              <button role="tab" aria-selected="false" id="course">
+                UI/UX basic fall 2022 @ Redi school
+              </button>
+            </li>
+            <li>
+              <button role="tab" aria-selected="false" id="self-training">
+                Self training
+              </button>
+            </li>
           </ul>
 
           <div class="tab-panel span-8">
-            <h3>3 Hammers</h3>
-            <h4>Intern Frontend Developer</h4>
-            <h5>Nov 2014</h5>
-            <p>
-              Slicing PSD using Photoshop for client websites and building
-              frontend using HTML and CSS.
-            </p>
-            <ul>
-              <li>Learned HTML, CSS and bootstrap</li>
-              <li>
-                Learned Photoshop for slicing, image editing and batch tasks.
-              </li>
-            </ul>
+            <div class="tab-panel-box" id="internship">
+              <h3>3 Hammers</h3>
+              <h4>Intern Frontend Developer</h4>
+              <h5>Nov 2014</h5>
+              <p>
+                Slicing PSD using Photoshop for client websites and building
+                frontend using HTML and CSS.
+              </p>
+              <ul>
+                <li>Learned HTML, CSS and bootstrap</li>
+                <li>
+                  Learned Photoshop for slicing, image editing and batch tasks.
+                </li>
+              </ul>
+            </div>
+            <div class="tab-panel-box">
+              <h3>3 Hammers</h3>
+              <h4>Intern Frontend Developer</h4>
+              <h5>Nov 2014</h5>
+              <p>
+                Slicing PSD using Photoshop for client websites and building
+                frontend using HTML and CSS.
+              </p>
+              <ul>
+                <li>Learned HTML, CSS and bootstrap</li>
+                <li>
+                  Learned Photoshop for slicing, image editing and batch tasks.
+                </li>
+              </ul>
+            </div>
+            <div class="tab-panel-box" id="course">
+              <h3>Course at Redi school</h3>
+              <h4>Training from Radi school september 2022</h4>
+              <h5>sept 2022</h5>
+              <p>
+                Learn typography, colortheory, prototyping. wireframing, grid
+                layout and usability testing.
+              </p>
+              <ul>
+                <li>Learn to use figma</li>
+                <li>Learn to design website Mockup.</li>
+                <li>Learn to create website design in figma.</li>
+              </ul>
+            </div>
+            <div class="tab-panel-box" id="self-training">
+              <h3>Self training</h3>
+              <h4>Learning coding from internet</h4>
+              <h5>march 2022</h5>
+              <p>
+                Learn array, bullen, function, number, string, object in
+                javascript and also make component in React.js
+              </p>
+              <ul>
+                <li>Learn to use function</li>
+                <li>Learn to manupulate Dom</li>
+                <li>Learn to create components in React.js</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -262,6 +320,26 @@
           menu.style.display = "none";
         }
       });
+
+      const tabs = document.querySelector(".tab");
+      const tabButton = tabs.querySelectorAll('[role="tab"]');
+      const tabPanels = tabs.querySelectorAll('[role="tab"]');
+      const tabId = document.getElementById("internship");
+      const panels = document.getElementsByClassName("tab-panel-box");
+
+      panels.style.display = "none";
+
+      function handelTabClick(event) {
+        console.log(event);
+      }
+
+      tabButtons.forEach((tab) => {
+        tab.ariaSelected = false;
+      });
+
+      tabButton.forEach((button) =>
+        button.addEventListener("click", handelTabClick)
+      );
     </script>
   </body>
 </html>
