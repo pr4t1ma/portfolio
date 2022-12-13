@@ -90,24 +90,39 @@
         <div class="exp-details">
           <ul class="tabs span-4">
             <li class="active">
-              <button role="tab" aria-selected="true" id="internship">
+              <button
+                class="tab"
+                role="tab"
+                aria-selected="true"
+                data-id="internship"
+              >
                 3 Hammers
               </button>
             </li>
             <li>
-              <button role="tab" aria-selected="false" id="course">
+              <button
+                class="tab"
+                role="tab"
+                aria-selected="false"
+                data-id="course"
+              >
                 UI/UX basic fall 2022 @ Redi school
               </button>
             </li>
             <li>
-              <button role="tab" aria-selected="false" id="self-training">
+              <button
+                class="tab"
+                role="tab"
+                aria-selected="false"
+                data-id="self-training"
+              >
                 Self training
               </button>
             </li>
           </ul>
 
           <div class="tab-panel span-8">
-            <div class="tab-panel-box" id="internship">
+            <div class="panel" data-id="internship">
               <h3>3 Hammers</h3>
               <h4>Intern Frontend Developer</h4>
               <h5>Nov 2014</h5>
@@ -122,7 +137,7 @@
                 </li>
               </ul>
             </div>
-            <div class="tab-panel-box">
+            <div class="panel">
               <h3>3 Hammers</h3>
               <h4>Intern Frontend Developer</h4>
               <h5>Nov 2014</h5>
@@ -137,7 +152,7 @@
                 </li>
               </ul>
             </div>
-            <div class="tab-panel-box" id="course">
+            <div class="panel" data-id="course">
               <h3>Course at Redi school</h3>
               <h4>Training from Radi school september 2022</h4>
               <h5>sept 2022</h5>
@@ -151,7 +166,7 @@
                 <li>Learn to create website design in figma.</li>
               </ul>
             </div>
-            <div class="tab-panel-box" id="self-training">
+            <div class="panel" data-id="self-training">
               <h3>Self training</h3>
               <h4>Learning coding from internet</h4>
               <h5>march 2022</h5>
@@ -321,25 +336,40 @@
         }
       });
 
-      const tabs = document.querySelector(".tab");
-      const tabButton = tabs.querySelectorAll('[role="tab"]');
-      const tabPanels = tabs.querySelectorAll('[role="tab"]');
-      const tabId = document.getElementById("internship");
-      const panels = document.getElementsByClassName("tab-panel-box");
-
-      panels.style.display = "none";
-
-      function handelTabClick(event) {
-        console.log(event);
+      const tabBtn = document.getElementsByClassName("tab");
+      for (tab of tabBtn) {
+        tab.addEventListener("click", (e) => {
+          const tabId = e.currentTarget.getAttribute("data-id");
+          const currentId = e.currentTarget;
+          const panels = document.getElementsByClassName("panel");
+          for (const panel of panels) {
+            panel.style.display = "none";
+          }
+          const panel = document.querySelector(`.panel[data-id="${tabId}"]`);
+          panel.style.display = "block";
+          currentTab.classList.add("active");
+          console.log("currentTab");
+        });
       }
 
-      tabButtons.forEach((tab) => {
-        tab.ariaSelected = false;
-      });
+      // const tabButton = tabs.querySelectorAll('[role="tab"]');
+      // const tabPanels = tabs.querySelectorAll('[role="tab"]');
+      // const tabId = document.getElementById("internship");
+      // const panels = document.getElementsByClassName("tab-panel-box");
 
-      tabButton.forEach((button) =>
-        button.addEventListener("click", handelTabClick)
-      );
+      // panels.style.display = "none";
+
+      // function handelTabClick(event) {
+      //   console.log(event);
+      // }
+
+      // tabButtons.forEach((tab) => {
+      //   tab.ariaSelected = false;
+      // });
+
+      // tabButton.forEach((button) =>
+      //   button.addEventListener("click", handelTabClick)
+      // );
     </script>
   </body>
 </html>

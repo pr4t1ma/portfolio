@@ -300,16 +300,16 @@ main.container {
   display: flex;
   gap: 2%;
 }
-
-button#internship, button#course, button#self-training{
+ 
+.tab{
     padding: 15px 25px;
-      font-size: 20px;
+      font-size: 20px;    
       border: none;
       width:100%;
 }
 
 .exp-details .tab-panel-box {
-  padding: 10px 15px;
+  padding: 10px 15px;    
   font-size: 15px;
   line-height: 1.5;
   color: var(--ice);
@@ -317,6 +317,7 @@ button#internship, button#course, button#self-training{
 
 ul.tabs li {
   border-left: 3px solid var(--slate);
+  border-bottom: 1px solid #ddd;
 }
 
 ul.tabs li.active button,
@@ -327,9 +328,13 @@ ul.tabs li:hover button{
   background-color: var(--ocean-green);
 }
 
-.tab-panel h3,
-.tab-panel h5 {
-  font-size: 1rem;
+.tab-panel h3
+{
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+.tab-panel h5,.tab-panel h4{
+  font-size: 1.5rem;
 }
 
 .tab-panel {
@@ -345,6 +350,13 @@ ul.tabs li:hover button{
   position: absolute;
   left: 0px;
   color: var(--teal);
+}
+.panel{
+  display: none;
+}
+
+.panel li{
+  padding :7px 0;
 }
 .project-details h5:hover,
 .project-details h2:hover {
