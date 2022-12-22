@@ -28,13 +28,13 @@
             <a href=""> About</a>
           </li>
           <li>
-            <a href=""> Work</a>
+            <a href="#projects"> Projects</a>
           </li>
           <li>
             <a href="">Experience</a>
           </li>
           <li>
-            <a href=""> Contact</a>
+            <a href="#contact"> Contact</a>
           </li>
         </ul>
         <a class="button resume" href="#">Resume</a>
@@ -137,7 +137,7 @@
                 </li>
               </ul>
             </div>
-            <div class="panel">
+            <div class="panel" style="display: none">
               <h3>3 Hammers</h3>
               <h4>Intern Frontend Developer</h4>
               <h5>Nov 2014</h5>
@@ -152,7 +152,7 @@
                 </li>
               </ul>
             </div>
-            <div class="panel" data-id="course">
+            <div class="panel" style="display: none" data-id="course">
               <h3>Course at Redi school</h3>
               <h4>Training from Radi school september 2022</h4>
               <h5>sept 2022</h5>
@@ -166,7 +166,7 @@
                 <li>Learn to create website design in figma.</li>
               </ul>
             </div>
-            <div class="panel" data-id="self-training">
+            <div class="panel" style="display: none" data-id="self-training">
               <h3>Self training</h3>
               <h4>Learning coding from internet</h4>
               <h5>march 2022</h5>
@@ -187,7 +187,7 @@
       <!-- start experence-details -->
 
       <!-- start my projexts -->
-      <div class="projects">
+      <div class="projects" id="projects">
         <div class="heading">
           <h3>My feature Projects</h3>
           <div class="border"></div>
@@ -195,21 +195,42 @@
 
         <div class="project-details">
           <div class="project-image">
-            <img src="images/project1.png" alt="" />
+            <img src="images/p.png" alt="" />
           </div>
           <div class="project-desc">
-            <h5>featurd projects</h5>
-            <h2>12 column grid system</h2>
+            <h5>Figma & Webflow design for a website</h5>
+            <h2>Sana beauty</h2>
             <p>
-              A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm,
-              and more. Available on Visual Studio Marketplace, Package Control,
-              Atom Package Manager, and np
+              Sana beauty palar is a hobby project. I choose two colors a s a
+              main colors, purple and pink. This site is specially for the
+              women,who want to be beautiful.
             </p>
             <ul class="project-tags">
-              <li>html</li>
-              <li>grid system</li>
-              <li>flex grid system</li>
-              <li>Bootstrap</li>
+              <li>figma</li>
+              <li>component</li>
+              <li>auto layouyt</li>
+              <li>Colour/typography</li>
+            </ul>
+          </div>
+        </div>
+        <div class="project-details reverse">
+          <div class="project-image">
+            <img src="images/bundesplatzkino.jpg" alt="" />
+          </div>
+          <div class="project-desc">
+            <h5>Figma website redesign</h5>
+            <h2>Bundesplatz kino</h2>
+            <p>
+              Bundesplatz kono is a small local cinema. They shows german movies
+              . I have recreate design for Bundesplatz kino.I have choosed two
+              colors as a primary colors, black and yellow and some shades of
+              geay. I tried to make better for the user in this site.
+            </p>
+            <ul class="project-tags">
+              <li>prototype</li>
+              <li>autolayout</li>
+              <li>information-architecture</li>
+              <li>color/typography</li>
             </ul>
           </div>
         </div>
@@ -272,7 +293,7 @@
 
       <!--  End projects categories  -->
       <!-- Start Get in touch -->
-      <div class="get-intouch">
+      <div class="get-intouch" id="contact">
         <div class="heading center">
           <h3>What's Next?</h3>
         </div>
@@ -306,9 +327,7 @@
 
     <footer>
       <div class="social-media">
-        <a target="_blank" href="https://www.instagram.com/prati.ma/">
-          <i class="fa-brands fa-instagram"></i
-        ></a>
+        <a target="_blank" href="#"> <i class="fa-brands fa-instagram"></i></a>
         <a target="_blank" href="https://www.linkedin.com/in/pratima-maharjan/"
           ><i class="fa-brands fa-linkedin"></i
         ></a>
@@ -316,9 +335,7 @@
           <i class="fa-brands fa-github"></i
         ></a>
 
-        <a target="_blank" href="https://www.facebook.com/pr4tima"
-          ><i class="fa-brands fa-facebook-f"></i
-        ></a>
+        <a target="_blank" href="#"><i class="fa-brands fa-facebook-f"></i></a>
       </div>
       <p class="copyright">
         &copy; 2022 Designed and built by Pratima Maharjan
@@ -339,14 +356,18 @@
       const tabBtn = document.getElementsByClassName("tab");
       for (tab of tabBtn) {
         tab.addEventListener("click", (e) => {
+          const currentTab = e.currentTarget.getAttribute("data-id");
           const tabId = e.currentTarget.getAttribute("data-id");
           const currentId = e.currentTarget;
+
           const panels = document.getElementsByClassName("panel");
           for (const panel of panels) {
             panel.style.display = "none";
           }
+
           const panel = document.querySelector(`.panel[data-id="${tabId}"]`);
           panel.style.display = "block";
+
           currentTab.classList.add("active");
           console.log("currentTab");
         });

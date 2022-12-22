@@ -89,6 +89,9 @@ body {
 p {
   line-height: 1.5;
 }
+h1,h2{
+    font-size: 2rem;
+}
 
 h1,
 h2,
@@ -98,8 +101,17 @@ h5,
 h6 {
   margin: 0;
   padding: 0;
-  font-size: 1rem;
+
   font-family: var(--font-family-secondary);
+}
+
+h3,
+h4{
+  font-size: 1.5rem;
+}
+h5,
+h6{
+    font-size: 1rem;
 }
 
 a {
@@ -217,7 +229,7 @@ main.container {
 }
 
 .heading h3 {
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 .heading span {
@@ -351,9 +363,7 @@ ul.tabs li:hover button{
   left: 0px;
   color: var(--teal);
 }
-.panel{
-  display: none;
-}
+
 
 .panel li{
   padding :7px 0;
