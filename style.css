@@ -674,7 +674,9 @@ footer {
     background-attachment: fixed;
   }
 
-  
+  .form-wrapper{
+    justify-content: center;
+  }
 
   form h5 {
     font-size: 1.5rem;
