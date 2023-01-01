@@ -3,10 +3,12 @@
     <title>Pratima Maharjan - Frontend web developer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
     <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant:wght@300&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Ubuntu:wght@400&display=swap"
       rel="stylesheet"
     />
+
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
       rel="stylesheet"
@@ -19,310 +21,349 @@
   </head>
   <body>
     <header class="header">
-      <i class="fas fa-bars hamburger" id="hamburger"></i>
+      <div class="wide-container">
+        <div class="header-wrapper">
+          <i class="fas fa-bars hamburger" id="hamburger"></i>
 
-      <div class="logo"><h6>P</h6></div>
-      <nav class="menu">
-        <ul id="menu">
-          <li>
-            <a href=""> About</a>
-          </li>
-          <li>
-            <a href="#projects"> Projects</a>
-          </li>
-          <li>
-            <a href="">Experience</a>
-          </li>
-          <li>
-            <a href="#contact"> Contact</a>
-          </li>
-        </ul>
-        <a class="button resume" href="#">Resume</a>
-      </nav>
-    </header>
-    <main class="container">
-      <!-- start introduction-page -->
-
-      <div class="intro">
-        <div class="name">
-          <p>Hi, my name is</p>
-        </div>
-
-        <h1>Pratima Maharjan</h1>
-
-        <h2>I am currently learning web development</h2>
-        <div class="intro-detail">
-          <p>
-            I am currently focusing to learn HTML and CSS (Frontend web
-            development). My Hobby is watching movies, listening to music and
-            travelling.
-          </p>
+          <div class="logo"><h6>P</h6></div>
+          <nav class="menu">
+            <ul id="menu">
+              <li>
+                <a href=""> About</a>
+              </li>
+              <li>
+                <a href="#projects"> Projects</a>
+              </li>
+              <li>
+                <a href="">Experience</a>
+              </li>
+              <li>
+                <a href="#contact"> Contact</a>
+              </li>
+            </ul>
+            <a class="button resume" href="#">Resume</a>
+          </nav>
         </div>
       </div>
+    </header>
+    <main>
+      <!-- start introduction-page -->
+      <section>
+        <div class="container">
+            <div class="flex">
+        <div class="intro span-8 md-span-6">
+          <div class="name">
+            <p>Hi, my name is</p>
+          </div>
+
+          <h1>Pratima Maharjan</h1>
+
+          <h2>UI/UX designer and frontend web developer</h2>
+          <div class="about-info span-8 md-span-6">
+            <p>
+              I enjoy creating user focus UI and learn new thing on the
+              internet. I am currently focusing on learning UI/UX. My Hobby is
+              watching movies, listening to music and travelling.
+            </p>
+          </div>
+        </div>
+        <div class="profile-pic span-4 md-span-6">
+          <img src="images/Artistic.png" alt="" />
+        </div>
+      </div>
+        </div>
+      </section>
+    
 
       <!-- End introduction-page -->
 
-      <!-- start-about-page -->
-
-      <div class="aboutme">
-        <div class="heading">
-          <h3>About me</h3>
-          <div class="border"></div>
-        </div>
-        <div class="about-me-details">
-          <div class="profile-pic span-4 md-span-6">
-            <img src="images/pratima.jpg" alt="" />
-          </div>
-          <div class="about-info span-8 md-span-6">
-            <p>I enjoy creating UI and learn new thing on the internet.</p>
-          </div>
-        </div>
-      </div>
-      <!-- end-about-page -->
-
       <!-- start experence-details -->
+      <section>
+        <div class="container">
+             <div class="experence">
+          <div class="heading">
+            <h3>My Experence</h3>
+            <div class="border"></div>
+          </div>
+          <div class="exp-details">
+            <ul class="tabs span-4">
+              <li class="active">
+                <button
+                  class="tab"
+                  role="tab"
+                  aria-selected="true"
+                  data-id="internship"
+                >
+                  3 Hammers
+                </button>
+              </li>
+              <li>
+                <button
+                  class="tab"
+                  role="tab"
+                  aria-selected="false"
+                  data-id="course"
+                >
+                  UI/UX basic fall 2022 @ Redi school
+                </button>
+              </li>
+              <li>
+                <button
+                  class="tab"
+                  role="tab"
+                  aria-selected="false"
+                  data-id="self-training"
+                >
+                  Self training
+                </button>
+              </li>
+            </ul>
 
-      <div class="experence">
-        <div class="heading">
-          <h3>My Experence</h3>
-          <div class="border"></div>
-        </div>
-        <div class="exp-details">
-          <ul class="tabs span-4">
-            <li class="active">
-              <button
-                class="tab"
-                role="tab"
-                aria-selected="true"
-                data-id="internship"
-              >
-                3 Hammers
-              </button>
-            </li>
-            <li>
-              <button
-                class="tab"
-                role="tab"
-                aria-selected="false"
-                data-id="course"
-              >
-                UI/UX basic fall 2022 @ Redi school
-              </button>
-            </li>
-            <li>
-              <button
-                class="tab"
-                role="tab"
-                aria-selected="false"
-                data-id="self-training"
-              >
-                Self training
-              </button>
-            </li>
-          </ul>
-
-          <div class="tab-panel span-8">
-            <div class="panel" data-id="internship">
-              <h3>3 Hammers</h3>
-              <h4>Intern Frontend Developer</h4>
-              <h5>Nov 2014</h5>
-              <p>
-                Slicing PSD using Photoshop for client websites and building
-                frontend using HTML and CSS.
-              </p>
-              <ul>
-                <li>Learned HTML, CSS and bootstrap</li>
-                <li>
-                  Learned Photoshop for slicing, image editing and batch tasks.
-                </li>
-              </ul>
-            </div>
-            <div class="panel" style="display: none">
-              <h3>3 Hammers</h3>
-              <h4>Intern Frontend Developer</h4>
-              <h5>Nov 2014</h5>
-              <p>
-                Slicing PSD using Photoshop for client websites and building
-                frontend using HTML and CSS.
-              </p>
-              <ul>
-                <li>Learned HTML, CSS and bootstrap</li>
-                <li>
-                  Learned Photoshop for slicing, image editing and batch tasks.
-                </li>
-              </ul>
-            </div>
-            <div class="panel" style="display: none" data-id="course">
-              <h3>Course at Redi school</h3>
-              <h4>Training from Radi school september 2022</h4>
-              <h5>sept 2022</h5>
-              <p>
-                Learn typography, colortheory, prototyping. wireframing, grid
-                layout and usability testing.
-              </p>
-              <ul>
-                <li>Learn to use figma</li>
-                <li>Learn to design website Mockup.</li>
-                <li>Learn to create website design in figma.</li>
-              </ul>
-            </div>
-            <div class="panel" style="display: none" data-id="self-training">
-              <h3>Self training</h3>
-              <h4>Learning coding from internet</h4>
-              <h5>march 2022</h5>
-              <p>
-                Learn array, bullen, function, number, string, object in
-                javascript and also make component in React.js
-              </p>
-              <ul>
-                <li>Learn to use function</li>
-                <li>Learn to manupulate Dom</li>
-                <li>Learn to create components in React.js</li>
-              </ul>
+            <div class="tab-panel span-8">
+              <div class="panel" data-id="internship">
+                <p>3 Hammers</p>
+                <p>Intern Frontend Developer</p>
+                <p>Nov 2014</p>
+                <h2>
+                  Slicing PSD using Photoshop for client websites and building
+                  frontend using HTML and CSS.
+                </h2>
+                <ul>
+                  <li>Learned HTML, CSS and bootstrap</li>
+                  <li>
+                    Learned Photoshop for slicing, image editing and batch
+                    tasks.
+                  </li>
+                </ul>
+              </div>
+              <div class="panel" style="display: none">
+                <h3>3 Hammers</h3>
+                <h4>Intern Frontend Developer</h4>
+                <h5>Nov 2014</h5>
+                <p>
+                  Slicing PSD using Photoshop for client websites and building
+                  frontend using HTML and CSS.
+                </p>
+                <ul>
+                  <li>Learned HTML, CSS and bootstrap</li>
+                  <li>
+                    Learned Photoshop for slicing, image editing and batch
+                    tasks.
+                  </li>
+                </ul>
+              </div>
+              <div class="panel" style="display: none" data-id="course">
+                <p>Course at Redi school</p>
+                <p>Training from Radi school september 2022</p>
+                <p>sept 2022</p>
+                <h2>
+                  Learn typography, colortheory, prototyping. wireframing, grid
+                  layout and usability testing.
+                </h2>
+                <ul>
+                  <li>Learn to use figma</li>
+                  <li>Learn to design website Mockup.</li>
+                  <li>Learn to create website design in figma.</li>
+                </ul>
+              </div>
+              <div class="panel" style="display: none" data-id="self-training">
+                <p>Self training</p>
+                <p>Learning coding from internet</p>
+                <p>march 2022</p>
+                <h2>
+                  Learn array, bullen, function, number, string, object in
+                  javascript and also make component in React.js
+                </h2>
+                <ul>
+                  <li>Learn to use function</li>
+                  <li>Learn to manupulate Dom</li>
+                  <li>Learn to create components in React.js</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+        </div>
+     
+      </section>
 
       <!-- start experence-details -->
 
       <!-- start my projexts -->
-      <div class="projects" id="projects">
-        <div class="heading">
-          <h3>My feature Projects</h3>
-          <div class="border"></div>
-        </div>
+      <section>
+        <div class="container">
+          <div class="projects" id="projects">
+            <div class="heading">
+              <h3>My feature Projects</h3>
+              <div class="border"></div>
+            </div>
+            <div class="project-details reverse">
+              <div class="project-image">
+                <img src="images/bundesplatzkino.jpg" alt="" />
+              </div>
+              <div class="project-desc">
+                <h5>Figma website redesign</h5>
+                <h2>Bundesplatz kino</h2>
+                <p>
+                  Bundesplatz kono is a small local cinema. They shows german
+                  movies . I have recreate design for Bundesplatz kino.I have
+                  choosed two colors as a primary colors, black and yellow and
+                  some shades of geay. I tried to make better for the user in
+                  this site.
+                </p>
+                <ul class="project-tags">
+                  <li>prototype</li>
+                  <li>autolayout</li>
+                  <li>information-architecture</li>
+                  <li>color/typography</li>
+                </ul>
+              </div>
+            </div>
+            <div class="project-details">
+              <div class="project-image">
+                <img src="images/p.png" alt="" />
+              </div>
+              <div class="project-desc">
+                <h5>Figma & Webflow design for a website</h5>
+                <h2>Sana beauty</h2>
+                <p>
+                  Sana beauty palar is a hobby project. I choose two colors a s
+                  a main colors, purple and pink. This site is specially for the
+                  women,who want to be beautiful.
+                </p>
+                <ul class="project-tags">
+                  <li>figma</li>
+                  <li>component</li>
+                  <li>auto layouyt</li>
+                  <li>Colour/typography</li>
+                </ul>
+              </div>
+            </div>
 
-        <div class="project-details">
-          <div class="project-image">
-            <img src="images/p.png" alt="" />
-          </div>
-          <div class="project-desc">
-            <h5>Figma & Webflow design for a website</h5>
-            <h2>Sana beauty</h2>
-            <p>
-              Sana beauty palar is a hobby project. I choose two colors a s a
-              main colors, purple and pink. This site is specially for the
-              women,who want to be beautiful.
-            </p>
-            <ul class="project-tags">
-              <li>figma</li>
-              <li>component</li>
-              <li>auto layouyt</li>
-              <li>Colour/typography</li>
-            </ul>
-          </div>
-        </div>
-        <div class="project-details reverse">
-          <div class="project-image">
-            <img src="images/bundesplatzkino.jpg" alt="" />
-          </div>
-          <div class="project-desc">
-            <h5>Figma website redesign</h5>
-            <h2>Bundesplatz kino</h2>
-            <p>
-              Bundesplatz kono is a small local cinema. They shows german movies
-              . I have recreate design for Bundesplatz kino.I have choosed two
-              colors as a primary colors, black and yellow and some shades of
-              geay. I tried to make better for the user in this site.
-            </p>
-            <ul class="project-tags">
-              <li>prototype</li>
-              <li>autolayout</li>
-              <li>information-architecture</li>
-              <li>color/typography</li>
-            </ul>
+            <div class="project-details">
+              <div class="project-image">
+                <img src="images/project3.png" alt="" />
+              </div>
+              <div class="project-desc">
+                <h5>UI/UX design</h5>
+                <h2>Piano Academy Berlin</h2>
+                <p>
+                  The Piano Academy Berlin is a private piano school in the
+                  Southwest of Berlin, geared towards anyone interested in
+                  taking piano lessons. I have recreated this website, the
+                  current website is hard to read because of colour contrast. I
+                  tried to make this website simple and clear by following
+                  simple rule of UI/UX design.
+                </p>
+                <ul class="project-tags">
+                  <li>figma</li>
+                  <li>prototype</li>
+                  <li>brand design</li>
+                  <li>UI/UX design</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="project-details reverse">
-          <div class="project-image">
-            <img src="images/project1.png" alt="" />
-          </div>
-          <div class="project-desc">
-            <h5>featurd projects</h5>
-            <h2>12 column grid system</h2>
-            <p>
-              A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm,
-              and more. Available on Visual Studio Marketplace, Package Control,
-              Atom Package Manager, and np
-            </p>
-            <ul class="project-tags">
-              <li>html</li>
-              <li>grid system</li>
-              <li>flex grid system</li>
-              <li>Bootstrap</li>
-            </ul>
-          </div>
-        </div>
-      </div>
+      </section>
+
       <!-- End my projexts -->
       <!--  Start projects categories  -->
-      <div class="project-categories">
-        <div class="heading">
-          <h3>My Others Projects</h3>
-        </div>
-        <div class="project-grid">
-          <div class="project-item">
-            <div class="project-top">
-              <div class="folder">
-                <a href="#"><i class="fas fa-folder"></i></a>
-              </div>
-              <div class="polyline">
-                <a target="_blank" href="https://lummu.de"
-                  ><i class="fas fa-globe"></i
-                ></a>
-                <a href=""><i class="fab fa-github-alt"></i></a>
-              </div>
+      <section>
+        <div class="container">
+          <div class="project-categories">
+            <div class="heading">
+              <h3>My Others Projects</h3>
             </div>
-            <div class="project-title">
-              <h4>Lummu</h4>
-            </div>
-            <div class="project-discripto">
-              <p>Component library and frontend of an E-commerce site.</p>
-            </div>
+            <div class="project-grid">
+              <div class="project-item">
+                <div class="project-top">
+                  <div class="folder">
+                    <a href="#"><i class="fas fa-folder"></i></a>
+                  </div>
+                  <div class="polyline">
+                    <a target="_blank" href="https://lummu.de"
+                      ><i class="fas fa-globe"></i
+                    ></a>
+                    <a href=""><i class="fab fa-github-alt"></i></a>
+                  </div>
+                </div>
+                <div class="project-title">
+                  <h4>Lummu</h4>
+                </div>
+                <div class="project-discripto">
+                  <p>Component library and frontend of an E-commerce site.</p>
+                </div>
 
-            <ul class="project-list">
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>Fractal</li>
-            </ul>
+                <ul class="project-list">
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>Fractal</li>
+                </ul>
+              </div>
+            </div>
+            <a class="button center" href="/">See more</a>
           </div>
         </div>
-        <a class="button center" href="/">See more</a>
-      </div>
+      </section>
 
       <!--  End projects categories  -->
+
       <!-- Start Get in touch -->
-      <div class="get-intouch" id="contact">
-        <div class="heading center">
-          <h3>What's Next?</h3>
-        </div>
-        <h2>Get in touch</h2>
-        <get-in-touch-des>
-          <p>
-            I’m currently looking for new opportunities for trainee or intern
-            frontend developer positions in a small team. Where I can utilise
-            the skills I have leaned so far and also learn new things from the
-            team and further develop my web development skills!
-          </p>
-        </get-in-touch-des>
-        <form action="/" method="post">
-          <h5>Contact form</h5>
-          <div class="form-fields">
-            <input name="name" type="text" placeholder="Name" />
-            <input name="email" type="email" placeholder="Email" />
-            <textarea
-              name="message"
-              id="message"
-              cols="20"
-              rows="10"
-              placeholder="Write something"
-            ></textarea>
+      <section>
+        <div class="container">
+          <div class="get-intouch" id="contact">
+            <div class="heading center">
+              <h3>What's Next?</h3>
+            </div>
+              <h4>Get in touch</h4>
+            <get-in-touch-des>
+              <p>
+                I’m currently looking for new opportunities for trainee or
+                intern frontend developer positions in a small team. Where I can
+                utilise the skills I have leaned so far and also learn new
+                things from the team and further develop my web development
+                skills!
+              </p>
+            </get-in-touch-des>
+            </div>
+             </section>
+                   <!-- End Get in touch -->
+          <!-- Form start from here -->
+          <section class="form">
+            <div class="container">
+              <div class="flex">
+                  <div class="col-span-6  md-span-12">
+                    <form action="/" method="post">
+              <h5>Contact form</h5>
+              <div class="form-fields">
+                <input name="name" type="text" placeholder="Name" />
+                <input name="email" type="email" placeholder="Email" />
+                <textarea
+                  name="message"
+                  id="message"
+                  cols="20"
+                  rows="10"
+                  placeholder="Write something"
+                ></textarea>
+              </div>
+              <button class="button center">submit</button>
+            </form>
+              </div>
+              <div class="col-span-6  md-span-12">
+                <img src="images/contact-illustration.svg" alt="">
+              </div>
+              </div>
+            
+            </div>
+          </section>
+            
+              <!-- Form start from here -
           </div>
-          <button class="button center">submit</button>
-        </form>
-      </div>
-      <!-- End Get in touch -->
+        </div>
+     
+
+
     </main>
 
     <footer>
