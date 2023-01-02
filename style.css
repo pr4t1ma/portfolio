@@ -72,7 +72,7 @@
   flex-basis: 66%;
 }
 .span-9 {
-  flex-basis: 74.5;
+  flex-basis: 74.5%;
 }
 .span-10 {
   flex-basis: 83%;
@@ -560,6 +560,14 @@ a.button.center,
   background: #E9E9E9;
  
 }
+   
+.form-wrapper {
+      align-items: center;
+    }
+
+ .illustration{
+  max-width: 300px;
+ }
 
 form {
 
@@ -568,8 +576,6 @@ form {
   opacity: 0.8;
   display: flex;
   flex-direction: column;
-  /* justify-content: center;
-  align-items: center; */
   color: var(--ink);
   margin: 4rem 0;
 }
@@ -674,9 +680,7 @@ footer {
     background-attachment: fixed;
   }
 
-  .form-wrapper{
-    justify-content: center;
-  }
+
 
   form h5 {
     font-size: 1.5rem;
